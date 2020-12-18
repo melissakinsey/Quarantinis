@@ -415,7 +415,7 @@ body .demo-blog {
           align-items: center;
   font-size: 0.8em;
   margin-top: 16px;
-}
+}`
 .demo-blog--blogpost .comments .comment > .comment__actions button {
   margin-right: 16px;
   color: rgba(0, 0, 0, 0.24);
