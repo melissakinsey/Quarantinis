@@ -24,15 +24,11 @@
 
     <link rel="shortcut icon" href="images/favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./config.js"></script>
     <script type="text/javascript" src="script.js"></script>
 
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -49,21 +45,29 @@
     </style>
   </head>
   <body>
-    <form action="#">
+    <iframe
+    id="player"
+    type="text/html"
+    width="400"
+    height="300"
+    frameborder="0">
+    </iframe>        
+
+      <form action="#">
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <input class="mdl-textfield__input" type="text" id="sample3">
-        <label class="mdl-textfield__label" for="sample3">Search for cocktails </label>
+
+        <input class="mdl-textfield__input" type="text" id="cocktail-search">
+        <label class="mdl-textfield__label" for="sample3">Search For cocktails </label>
       </div>
-    </form>
-    <button class="mdl-button mdl-js-button mdl-button--raised">
-      Search
-      </button>
-      
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-Random cocktails
+        <button class="mdl-button mdl-js-button mdl-button--raised" id="search">
+        Search
+        </button>
+      </form>
 
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="random-cocktails">
+      Random cocktails
+    </button>
 
-</button>
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
         <div class="demo-blog__posts mdl-grid">
@@ -74,16 +78,18 @@ Random cocktails
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
           
             <div>
-             <button class="mdl-button mdl-js-button mdl-button--raised">
+             <button class="mdl-button mdl-js-button mdl-button--raised" id="jazz">
              jazz
              </button>
-            <button class="mdl-button mdl-js-button mdl-button--raised">
+            <button class="mdl-button mdl-js-button mdl-button--raised" id="christmas">
               christmas cafe
-             </button>
-             <button class="mdl-button mdl-js-button mdl-button--raised">
-              instrumental
+         
+         
+             <button class="mdl-button mdl-js-button mdl-button--raised" id="bossa">
+              Italian bossa
+               
               </button>
-              <button class="mdl-button mdl-js-button mdl-button--raised">
+              <button class="mdl-button mdl-js-button mdl-button--raised" id="instrumental">
                instrumental
               </button>
                     
@@ -96,9 +102,7 @@ Random cocktails
               <i class="material-icons mdl-color-text--white" role="presentation">add</i>
               <span class="visuallyhidden">add</span>
             </button>
-            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
-              <img src="images/logo.png">
-              +1,337
+            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600" id="ingredients">
             </div>
             <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
               <div>`
@@ -123,6 +127,7 @@ Random cocktails
             <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
               Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
             </div>
+
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
            
          
@@ -133,10 +138,12 @@ Random cocktails
                 <span>2 days ago</span>
               </div>
             </div>
+
           </div>
+          
           <div class="mdl-card shopping mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50">
-              <h3><a href="entry.html">Cocktail Recepies</a></h3>
+            <div class="mdl-card__media mdl-color-text--grey-50 recipe">
+              <h3><a href="entry.html">Cocktail Recipe</a></h3>
             </div>
             <div class="mdl-card__supporting-text mdl-color-text--grey-600">
               Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
@@ -148,7 +155,14 @@ Random cocktails
                 <span>2 days ago</span>
               </div>
             </div>
-         
+
+          </div>
+          <nav class="demo-nav mdl-cell mdl-cell--12-col">
+            <div class="section-spacer"></div>
+            <a href="entry.html"a>
+          </nav>
+        </div>
+
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
             <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter">
