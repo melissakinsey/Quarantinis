@@ -1,16 +1,16 @@
-
+$(document).ready(function () {
 var APIkeyYoutube = configVars.APIkeyYoutube
 var search = "cocktail music"
 var queryURLyoutube = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + search + "&key=" + APIkeyYoutube
 
 var queryURLcocktails = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-var queryURLsearch = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + cocktailName
+var queryURLsearch = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
 
 var videos = []
 
 function queryRandomCocktails() {
     $.ajax({
-    url: queryURLcocktail,
+    url: queryURLcocktails,
     method: "GET"
     }).then(function(response) {
       console.log(response)
@@ -25,6 +25,8 @@ function queryRandomCocktails() {
 }
 
 function queryCocktailName() {
+  var queryURLsearch = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + cocktailName
+  var cocktailName = $("#cocktail-search").val().trim();
     $.ajax({
     url: queryURLsearch,
     method: "GET"
@@ -54,3 +56,10 @@ function queryYoutube() {
     }
 })
 }
+
+$("#random-cocktails").on("click", function() {
+  queryRandomCocktails()
+})
+queryYoutube();
+
+})
