@@ -4,10 +4,10 @@ var search = "cocktail music"
 var queryURLyoutube = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + search + "&key=" + APIkeyYoutube
 
 var queryURLcocktails = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-var queryURLsearch = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
 
 var videos = []
 var cocktails = []
+var favCocktails = []
 
 queryYoutube();
 
@@ -20,9 +20,11 @@ function queryRandomCocktails() {
       console.log(response)
       cocktails.push(response.drinks[0].strDrink)
       console.log(cocktails)
-    for (i = 0; i < 10; i++) {
-    localStorage.setItem("cocktail" + [i], (JSON.stringify(cocktails[i])))
-    }
+    //for (i = 0; i < 10; i++) {
+    //localStorage.setItem("cocktail" + [i], (JSON.stringify(cocktails[i])))
+    //}
+    $("#cocktail-name").text(response.drinks[0].strDrink);        
+
     
 
     $("#ingredients").empty();
@@ -73,6 +75,8 @@ function queryCocktailName() {
     method: "GET"
   }).then(function(response) {
     console.log(response)
+    $("#cocktail-name").text(response.drinks[0].strDrink);        
+
     $("#ingredients").empty();
     var ingredients1 = $("<p>").text(response.drinks[0].strIngredient1 + ": " + response.drinks[0].strMeasure1);
     $("#ingredients").append(ingredients1)
@@ -112,6 +116,27 @@ photo.attr("style", "background-image: url(" + pic + ")")
   })
 }
 
+$("#plus-sign").on("click", function () {
+  var newCocktail = $("#cocktail-name").html()
+  favCocktails.push(newCocktail)
+  console.log(newCocktail)
+  localStorage.setItem("favCocktails", JSON.stringify(favCocktails))
+  console.log(favCocktails)
+  renderFavorites();
+})
+ 
+function renderFavorites () {
+  var favorites = JSON.parse(localStorage.getItem("favCocktails"))
+console.log(favorites)
+  for ( i = 0; i < favorites.length; i++) {
+     var fav = $("<p>").text(favorites[i])
+     //.on("click", searchCocktails())
+  }
+  //MUST FIND A DIV TO PUT THIS IN
+  $("#favorites").append(fav)
+}
+
+
 
 
 function queryYoutube() { 
@@ -126,6 +151,7 @@ function queryYoutube() {
     }
     }
 })
+console.log(videos)
 }
 
 $("#search").on("click", function() {
@@ -145,7 +171,7 @@ $("#christmas").on("click", function() {
 })
 
 $("bossa").on("click", function() {
-  var videoSource = "http://www.youtube.com/embed/" + videos[4]
+  var videoSource = "http://www.youtube.com/embed/" + videos[1]
   $("#player").attr("src", videoSource)
 })
 
