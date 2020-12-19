@@ -9,6 +9,9 @@ var queryURLsearch = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
 var videos = []
 var cocktails = []
 
+queryYoutube();
+
+
 function queryRandomCocktails() {
     $.ajax({
     url: queryURLcocktails,
@@ -110,6 +113,7 @@ photo.attr("style", "background-image: url(" + pic + ")")
 }
 
 
+
 function queryYoutube() { 
     $.ajax({
   url: queryURLyoutube,
@@ -130,6 +134,23 @@ $("#search").on("click", function() {
 $("#random-cocktails").on("click", function() {
   queryRandomCocktails()
 })
-queryYoutube();
+$("#jazz").on("click", function() {
+  var videoSource = "http://www.youtube.com/embed/" + videos[0]
+  $("#player").attr("src", videoSource)
+})
+
+$("#christmas").on("click", function() {
+  var videoSource = "http://www.youtube.com/embed/" + videos[3]
+  $("#player").attr("src", videoSource)
+})
+
+$("bossa").on("click", function() {
+  var videoSource = "http://www.youtube.com/embed/" + videos[4]
+  $("#player").attr("src", videoSource)
+})
+
+
+
+
 
 })
