@@ -1,5 +1,5 @@
 
-var APIkeyYoutube = "AIzaSyAwXulHTdij6874NXi4bgSLnaB2vqA9AaU"
+APIkeyYoutube = configVars.APIkeyYoutube
 var search = "cocktail music"
 var queryURLyoutube = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + search + "&key=" + APIkeyYoutube
 
@@ -10,4 +10,11 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
       console.log(response)
+      $("#title").text(response.drinks[0].strDrink);
+      var ingredients = $("<p>").text(response.drinks[0].strIngredient1);
+      $("#title").append(ingredients)
+      var pic = response.drinks[0].strDrinkThumb
+      var photo = $("#photo").attr("src", pic)
+      $("#title").prepend(photo)
+      console.log(videos)
   })
