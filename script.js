@@ -12,16 +12,12 @@ function queryRandomCocktails() {
     url: queryURLcocktails,
     method: "GET"
     }).then(function(response) {
-      console.log(response)
       cocktails.push(response.drinks[0].strDrink)
       console.log(cocktails)
     //for (i = 0; i < 10; i++) {
     //localStorage.setItem("cocktail" + [i], (JSON.stringify(cocktails[i])))
     //}
     $("#cocktail-name").text(response.drinks[0].strDrink);        
-
-    
-
     $("#ingredients").empty();
           var ingredients1 = $("<p>").text(response.drinks[0].strIngredient1 + ": " + response.drinks[0].strMeasure1);
           $("#ingredients").append(ingredients1)
@@ -57,7 +53,6 @@ function queryRandomCocktails() {
       var pic = response.drinks[0].strDrinkThumb
       var photo = $(".demo-blog .coffee-pic .mdl-card__media")
       photo.attr("style", "background-image: url(" + pic + ")")
-
     })
 }
 
@@ -131,9 +126,6 @@ console.log(favorites)
   $("#favorites").append(fav)
 }
 
-
-
-
 function queryYoutube() { 
   var queryURLyoutube = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=cocktail+music" + searchVideo[searchVideo.length-1] + "&key=" + APIkeyYoutube
 console.log(queryURLyoutube)
@@ -144,9 +136,7 @@ console.log(queryURLyoutube)
     console.log(response)
     console.log(response.items[0].id.videoId)
     var videoSource = "http://www.youtube.com/embed/" + response.items[0].id.videoId
-
     $("#player").attr("src", videoSource)
-  
 })
 }
 
@@ -157,44 +147,11 @@ $("#random-cocktails").on("click", function() {
   queryRandomCocktails()
 })
 
-
 $(document).on("click", ".music-button", function() {
   var searchYoutube = $(this).attr("data-name");
   console.log(searchYoutube)
   searchVideo.push(searchYoutube);
   queryYoutube();
 })
-/*
-$("#jazz").on("click", function() {
-  var searchYoutube = $(this).attr("data-name");
-  console.log(searchYoutube)
-  searchVideo.push(searchYoutube);
-  queryYoutube();
-})
-$("#christmas").on("click", function() {
-  var searchYoutube = $(this).attr("data-name");
-  console.log(searchYoutube)
-  searchVideo.push(searchYoutube);
-  console.log(searchVideo)
-  queryYoutube();
-})
-$("#bossa").on("click", function() {
-  var searchYoutube = $(this).attr("data-name");
-  console.log(searchYoutube)
-  searchVideo.push(searchYoutube);
-  console.log(searchVideo)
-  queryYoutube();
-})
-$("#instrumental").on("click", function() {
-  var searchYoutube = $(this).attr("data-name");
-  console.log(searchYoutube)
-  searchVideo.push(searchYoutube);
-  console.log(searchVideo)
-  queryYoutube();
-})
-*/
-
-
-
 
 })
