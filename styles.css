@@ -91,12 +91,11 @@ body .demo-blog {
       -ms-flex-align: end;
           align-items: flex-end;
   cursor: pointer;
-  text-align: start;
+  align-items: start;
 }
 .demo-blog .mdl-card__media a,
 .demo-blog .mdl-card__title a {
   color: inherit;
-  text-align: start;
 }
 .demo-blog .mdl-card__supporting-text {
   width: 100%;
@@ -116,12 +115,10 @@ body .demo-blog {
 }
 .demo-blog .mdl-card__media ~ .mdl-card__supporting-text {
   min-height: 64px;
-  text-align: start;
 }
 .demo-blog .mdl-card__supporting-text:not(:last-child) {
   box-sizing: border-box;
   min-height: 76px;
-  text-align: start;
 }
 .demo-blog:not(.demo-blog--blogpost) .mdl-card__supporting-text ~ .mdl-card__supporting-text {
   border-top: 1px solid rgba(0,0,0,0.1);
@@ -146,7 +143,6 @@ body .demo-blog {
       -ms-flex-pack: start;
           justify-content: flex-start;
   height: auto;
-  text-align: start;
 }
 .demo-blog .meta > .meta__favorites{
   -webkit-flex-direction: row;
@@ -230,7 +226,9 @@ body .demo-blog {
   border-bottom-right-radius: 2px;
 }
 .demo-blog .on-the-road-again .mdl-card__media {
-  background-image: 
+  align-items: stretch;
+  justify-content: space-around;
+   
 }
 .demo-blog .shopping .mdl-card__media {
   background-image: ;
@@ -270,15 +268,12 @@ body .demo-blog {
   color: inherit;
   text-decoration: none;
   font-weight: inherit;
-  text-align: start;
 }
 .demo-blog .mdl-card h3 {
   margin: 0;
-  text-align: start;
 }
 .demo-blog .mdl-card h3 a {
   text-decoration: none;
-  text-align: start;
 }
 .demo-blog .mdl-card h3.quote:before, .demo-blog .mdl-card h3.quote:after {
   display: block;
@@ -297,7 +292,6 @@ body .demo-blog {
 .demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
   background-image: cover;
   height: 280px;
-  text-align: start;
 }
 .demo-blog--blogpost .comments {
   background-color: #EEE;
@@ -308,7 +302,6 @@ body .demo-blog {
           align-items: center;
 }
 .demo-blog--blogpost .meta + .mdl-card__supporting-text {
-  text-align: start;
   border: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -322,7 +315,6 @@ body .demo-blog {
   margin: 16px auto;
   font-size: 16px;
   line-height: 28px;
-  text-align: start;
 }
 
 
