@@ -190,7 +190,7 @@ body .demo-blog {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-justify-content: center;
+  -webkit-justify-content: right;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-align-items: center;
@@ -204,7 +204,21 @@ body .demo-blog {
   -webkit-transform: translate(0px, -28px);
           transform: translate(0px, -28px);
 }
-.demo-blog .something-else .mdl-card__media {
+<div class="mdl-card mdl-shadow--4dp">
+  <div class="mdl-card__media"><img src="skytower.jpg" width="173" height="157" border="0"
+   alt="" style="padding:10px;">
+  </div>
+  <div class="mdl-card__supporting-text">
+    Auckland Sky Tower, taken March 24th, 2014
+  </div>
+  <div class="mdl-card__supporting-text">
+  The Sky Tower is an observation and telecommunications tower located in Auckland,
+  New Zealand. It is 328 metres (1,076 ft) tall, making it the tallest man-made structure
+  in the Southern Hemisphere.
+  </div>
+</div>
+
+/* .demo-blog .something-else .mdl-card__media {
   font-size: 13px;
   font-weight: 500;
   border-top-left-radius: 2px;
@@ -219,7 +233,7 @@ body .demo-blog {
   background-color: #F5F5F5;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
-}
+} */
 .demo-blog .on-the-road-again .mdl-card__media {
   background-image: url('images/road.jpg');
 }
