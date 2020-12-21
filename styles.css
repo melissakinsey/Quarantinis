@@ -1,7 +1,9 @@
-body::before {
-  background: url('images/background.jpg');
-  background-size: cover;
-    background-attachment: fixed;
+body.multi-bg::before {
+  background-image: url('images/quarantinis-title.png'), url('images/background.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: relative;
+  background-attachment: fixed;
     content: '';
     will-change: transform;
     z-index: -1;
@@ -10,42 +12,30 @@ body::before {
     bottom: 0;
     top: 0;
     position: fixed;
-   
-    background-repeat: no-repeat;
 }
+
 @media (max-width: 512px)  and (-webkit-min-device-pixel-ratio: 1.5),
        (max-width: 512px)  and (min-resolution: 1.5dppx),
        (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
        (max-width: 1024px) and (max-resolution: 1.5dppx) {
-  body::before {
-    background: url('images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
 }
 @media (min-width: 513px)  and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
        (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
        (min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
        (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
-  body::before {
-    background: url('images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
 }
 @media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.5),
        (min-width: 1025px) and (min-resolution: 1.5dppx),
        (min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
        (min-width: 2049px) and (max-resolution: 1.5dppx) {
-  body::before {
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
 }
-
 
 body .demo-blog {
   font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin-left: 8rem;
+  float: right;
+  align-items: bottom;
+  position: relative;
 }
 
 .demo-blog .demo-blog__posts {
@@ -61,9 +51,24 @@ body .demo-blog {
           flex-shrink: 0;
 }
 
+/* h1 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 9rem;
+  color: #faad08;
+  margin-top: 30%;
+}
+
+h2 {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: #fbe79a;
+} */
+
 .demo-blog.mdl-layout .mdl-layout__content {
   padding-top: 230px;
-  position: relative;
+  position: right;
   -webkit-overflow-scrolling: touch;
 }
 .demo-blog .mdl-card {
@@ -74,7 +79,7 @@ body .demo-blog {
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
+      /* -ms-flex-align: stretch; */
           align-items: stretch;
   min-height: 560px;
 }
@@ -97,11 +102,11 @@ body .demo-blog {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-align-items: flex-end;
+  /* -webkit-align-items: flex-end;
       -ms-flex-align: end;
-          align-items: flex-end;
+          align-items: flex-end; */
   cursor: pointer;
-  align-items: start;
+  align-items: flex-end;
 }
 .demo-blog .mdl-card__media a,
 .demo-blog .mdl-card__title a {
@@ -114,11 +119,18 @@ body .demo-blog {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  /* -webkit-align-items: right;
+      -ms-flex-align: right;
+          align-items: right; */
+}
+button.mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent {
+color: #faad08;
 }
 
+button {
+  justify-content: center; 
+  align-items: center;
+}
 
 .demo-blog .mdl-card__supporting-text strong {
   font-weight: 400;
@@ -146,12 +158,12 @@ body .demo-blog {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  /* -webkit-align-items: right;
+      -ms-flex-align: right;
+          align-items: right; */
+  /* -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; */
   height: auto;
 }
 .demo-blog .meta > .meta__favorites{
@@ -168,7 +180,7 @@ body .demo-blog {
   margin-left: 12px;
 }
 .demo-blog .mdl-card .meta.meta--fill {
-  -webkit-justify-content: space-between;
+  -webkit-justify-content: space-between; 
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -204,7 +216,7 @@ body .demo-blog {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-justify-content: right;
+  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-align-items: center;
@@ -229,13 +241,13 @@ body .demo-blog {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.demo-blog .on-the-road-again .mdl-card__media {
+/* .demo-blog .on-the-road-again .mdl-card__media {
   
    
 }
 .demo-blog .shopping .mdl-card__media {
-  background-image: ;
-}
+ 
+} */
 .demo-blog .demo-blog__posts > .demo-nav {
   margin: 12px 15px;
   display: -webkit-flex;
@@ -247,9 +259,9 @@ body .demo-blog {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-align-items: right;
+      -ms-flex-align: right;
+          align-items: right;
   color: white;
   font-weight: 500;
 }
@@ -336,3 +348,6 @@ body .demo-blog {
   display: flex !important;
 }
 
+#random-cocktail {
+  background-color: #faad08;
+}
