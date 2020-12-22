@@ -1,44 +1,37 @@
 $(document).ready(function () {
 var APIkeyYoutube = configVars.APIkeyYoutube
-var search = "cocktail music"
-var queryURLyoutube = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=" + search + "&key=" + APIkeyYoutube
 
 var queryURLcocktails = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-var queryURLsearch = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
 
-var videos = []
+var searchVideo = []
 var cocktails = []
-
-queryYoutube();
-
+var favCocktails = []
 
 function queryRandomCocktails() {
     $.ajax({
     url: queryURLcocktails,
     method: "GET"
     }).then(function(response) {
-      console.log(response)
       cocktails.push(response.drinks[0].strDrink)
       console.log(cocktails)
-    for (i = 0; i < 10; i++) {
-    localStorage.setItem("cocktail" + [i], (JSON.stringify(cocktails[i])))
-    }
-    
-
+    //for (i = 0; i < 10; i++) {
+    //localStorage.setItem("cocktail" + [i], (JSON.stringify(cocktails[i])))
+    //}
+    $("#cocktail-name").text(response.drinks[0].strDrink);        
     $("#ingredients").empty();
           var ingredients1 = $("<p>").text(response.drinks[0].strIngredient1 + ": " + response.drinks[0].strMeasure1);
           $("#ingredients").append(ingredients1)
           var ingredients2 = $("<p>").text(response.drinks[0].strIngredient2 + ": " + response.drinks[0].strMeasure2);
           $("#ingredients").append(ingredients2)
-          if (response.drinks[0].strIngredient4 !== null) {
+          if (response.drinks[0].strIngredient3 !== null) {
           var ingredients3 = $("<p>").text(response.drinks[0].strIngredient3 + ": " + response.drinks[0].strMeasure3);
           $("#ingredients").append(ingredients3)
           }
           if (response.drinks[0].strIngredient4 !== null) {
-          var ingredients4 = $("<p>").text(response.drinks[0].strIngredient4 + ": " + response.drinks[0].strMeasure4);
-          $("#ingredients").append(ingredients4)
-          }
-          if (response.drinks[0].strIngredient5 !== null) {
+            var ingredients4 = $("<p>").text(response.drinks[0].strIngredient4 + ": " + response.drinks[0].strMeasure4);
+            $("#ingredients").append(ingredients4)
+            }
+            if (response.drinks[0].strIngredient5 !== null) {
           var ingredients5 = $("<p>").text(response.drinks[0].strIngredient5 + ": " + response.drinks[0].strMeasure5);
           $("#ingredients").append(ingredients5)
           }
@@ -60,7 +53,6 @@ function queryRandomCocktails() {
       var pic = response.drinks[0].strDrinkThumb
       var photo = $(".demo-blog .coffee-pic .mdl-card__media")
       photo.attr("style", "background-image: url(" + pic + ")")
-
     })
 }
 
@@ -73,19 +65,21 @@ function queryCocktailName() {
     method: "GET"
   }).then(function(response) {
     console.log(response)
+    $("#cocktail-name").text(response.drinks[0].strDrink);        
+
     $("#ingredients").empty();
     var ingredients1 = $("<p>").text(response.drinks[0].strIngredient1 + ": " + response.drinks[0].strMeasure1);
     $("#ingredients").append(ingredients1)
     var ingredients2 = $("<p>").text(response.drinks[0].strIngredient2 + ": " + response.drinks[0].strMeasure2);
     $("#ingredients").append(ingredients2)
-    if (response.drinks[0].strIngredient4 !== null) {
+    if (response.drinks[0].strIngredient3 !== null) {
     var ingredients3 = $("<p>").text(response.drinks[0].strIngredient3 + ": " + response.drinks[0].strMeasure3);
     $("#ingredients").append(ingredients3)
     }
     if (response.drinks[0].strIngredient4 !== null) {
-    var ingredients4 = $("<p>").text(response.drinks[0].strIngredient4 + ": " + response.drinks[0].strMeasure4);
-    $("#ingredients").append(ingredients4)
-    }
+      var ingredients4 = $("<p>").text(response.drinks[0].strIngredient4 + ": " + response.drinks[0].strMeasure4);
+      $("#ingredients").append(ingredients4)
+      }
     if (response.drinks[0].strIngredient5 !== null) {
     var ingredients5 = $("<p>").text(response.drinks[0].strIngredient5 + ": " + response.drinks[0].strMeasure5);
     $("#ingredients").append(ingredients5)
@@ -112,19 +106,37 @@ photo.attr("style", "background-image: url(" + pic + ")")
   })
 }
 
-
+$("#plus-sign").on("click", function () {
+  var newCocktail = $("#cocktail-name").html()
+  favCocktails.push(newCocktail)
+  console.log(newCocktail)
+  localStorage.setItem("favCocktails", JSON.stringify(favCocktails))
+  console.log(favCocktails)
+  renderFavorites();
+})
+ 
+function renderFavorites () {
+  var favorites = JSON.parse(localStorage.getItem("favCocktails"))
+console.log(favorites)
+  for ( i = 0; i < favorites.length; i++) {
+     var fav = $("<p>").text(favorites[i])
+     //.on("click", searchCocktails())
+  }
+  //MUST FIND A DIV TO PUT THIS IN
+  $("#favorites").append(fav)
+}
 
 function queryYoutube() { 
-    $.ajax({
+  var queryURLyoutube = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=cocktail+music" + searchVideo[searchVideo.length-1] + "&key=" + APIkeyYoutube
+console.log(queryURLyoutube)
+  $.ajax({
   url: queryURLyoutube,
   method: "GET"
 }).then(function(response) {
     console.log(response)
     console.log(response.items[0].id.videoId)
-   if (videos < 5) {for (i = 0; i < 5; i++) {
-    videos.push(response.items[i].id.videoId)
-    }
-    }
+    var videoSource = "http://www.youtube.com/embed/" + response.items[0].id.videoId
+    $("#player").attr("src", videoSource)
 })
 }
 
@@ -134,23 +146,12 @@ $("#search").on("click", function() {
 $("#random-cocktails").on("click", function() {
   queryRandomCocktails()
 })
-$("#jazz").on("click", function() {
-  var videoSource = "http://www.youtube.com/embed/" + videos[0]
-  $("#player").attr("src", videoSource)
+
+$(document).on("click", ".music-button", function() {
+  var searchYoutube = $(this).attr("data-name");
+  console.log(searchYoutube)
+  searchVideo.push(searchYoutube);
+  queryYoutube();
 })
-
-$("#christmas").on("click", function() {
-  var videoSource = "http://www.youtube.com/embed/" + videos[3]
-  $("#player").attr("src", videoSource)
-})
-
-$("bossa").on("click", function() {
-  var videoSource = "http://www.youtube.com/embed/" + videos[4]
-  $("#player").attr("src", videoSource)
-})
-
-
-
-
 
 })
