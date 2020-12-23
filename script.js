@@ -1,6 +1,5 @@
 $(document).ready(function () {
-  // var APIkeyYoutube = configVars.APIkeyYoutube
-  var APIkeyYoutube = "AIzaSyCOiOIVcOsVgGdwx-wtXI1imE2aZF_30Gc"
+  var APIkeyYoutube = configVars.APIkeyYoutube
   
   
   var queryURLcocktails = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
