@@ -1,6 +1,9 @@
 $(document).ready(function () {
+
   var APIkeyYoutube = configVars.APIkeyYoutube
-  
+
+
+
   
   var queryURLcocktails = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
   
@@ -104,8 +107,7 @@ $(document).ready(function () {
   var photo = $(".demo-blog .coffee-pic")
   photo.attr("style", "background-image: url(" + pic + ")")
   
-    })
-  }
+
   
   $("#favorites-button").on("click", function () {
     var newCocktail = $("#cocktail-name").html()
@@ -159,3 +161,7 @@ $(document).ready(function () {
   })
   
   })
+
+
+})
+
