@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
   var APIkeyYoutube = configVars.APIkeyYoutube
-  
-  
+
+
+
   
   var queryURLcocktails = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
   
