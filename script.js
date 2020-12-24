@@ -7,6 +7,8 @@ var searchVideo = []
 var cocktails = []
 var favCocktails = []
 
+
+
 function queryRandomCocktails() {
     $.ajax({
     url: queryURLcocktails,
@@ -107,25 +109,21 @@ photo.attr("style", "background-image: url(" + pic + ")")
   })
 }
 
-$("#plus-sign").on("click", function () {
-  var newCocktail = $("#cocktail-name").html()
-  favCocktails.push(newCocktail)
-  console.log(newCocktail)
-  localStorage.setItem("favCocktails", JSON.stringify(favCocktails))
-  console.log(favCocktails)
-  renderFavorites();
-})
+
  
 function renderFavorites () {
+  //$("#favorites").empty()
   var favorites = JSON.parse(localStorage.getItem("favCocktails"))
+
 console.log(favorites)
-  for ( i = 0; i < favorites.length; i++) {
+  for (i = 0; i < favorites.length; i++) {
      var fav = $("<p>").text(favorites[i]).addClass("favorites").attr("data-name", favorites[i])
      console.log(fav)
+     $("#favorites").append(fav)
      //.on("click", searchCocktails())
   }
   //MUST FIND A DIV TO PUT THIS IN
-  $("#favorites").append(fav)
+  
 }
 
 function queryYoutube() { 
@@ -137,7 +135,7 @@ console.log(queryURLyoutube)
 }).then(function(response) {
     console.log(response)
     console.log(response.items[0].id.videoId)
-    var videoSource = "http://www.youtube.com/embed/" + response.items[0].id.videoId
+    var videoSource = "http://www.youtube.com/embed/" + response.items[0].id.videoId + "?wmode=transparent&amp;rel=0&autoplay=1"
     $("#player").attr("src", videoSource)
 })
 }
@@ -156,62 +154,29 @@ $(document).on("click", ".music-button", function() {
   queryYoutube();
 })
 
+$("#plus-sign").on("click", function () {
+  var newCocktail = $("#cocktail-name").html()
+  if (newCocktail) {
+  favCocktails.push(newCocktail)
+  }
+  console.log(newCocktail)
+  localStorage.setItem("favCocktails", JSON.stringify(favCocktails))
+  console.log(favCocktails)
+  //$("#favorites").empty()
+  renderFavorites();
+})
+
 $(document).on("click", ".favorites", function() {
   var cocktailName = $(this).attr("data-name")
+ 
   cocktails.push(cocktailName)
+  
   queryCocktailName()
 })
 
-/*
-//purna's code starts here
-var cocktailName;
-//local stortage function
-favCocktailList();
-//$("<div>Cocktail List</div>").appendTo("#cocktailList")
-// This function displays the city entered by the user into the DOM
-function renderCocktails(){
-  $("#cocktailList").empty();
-  $("#cocktailInput").val(""); //where we can dump our fav cocktail
-  for (i=0; i<cocktails.length; i++){
-      var a = $("<p>");
-      a.addClass("list-group-item list-group-item-action list-group-item-primary cocktail");
-      a.attr("data-name", cocktails[i]);
-      a.text(cocktails[i]);
-      $("#cocktailList").prepend(a);
-  }
-}
-// This function pulls the cocktails list array from local storage
-function favCocktailList() {
-  var storedCocktails = JSON.parse(localStorage.getItem("cocktails"));
-  if (storedCocktails !== null) {
-      cocktails = storedCocktails;
-  }
-  renderCocktails();
-  }
-  // This function saves the cocktails array to local storage
-function storeCocktailArray() {
-  localStorage.setItem("cocktails", JSON.stringify(cocktails));
-  }
-  // This function saves the currently display cocktai to local storage
-function storeCurrentCoctail() {
-  localStorage.setItem("currentcoctail", JSON.stringify(cocktailName));
-}
-  // Click event handler for cocktail search button
-$("#random-cocktails").on("click", function(event){
-  event.preventDefault();
-  cocktailName = $("#cocktailInput").val().trim();
-   if (cocktails.length >= 5){
-      cocktails.shift();
-      cocktails.push(cocktailName);
-  }else{
-  cocktails.push(cocktailName);
-  }
-  storeCurrentCoctail();
-  storeCocktailArray();
-  renderCocktails();
-});
-*/
-//purna's code ends here
+renderFavorites()
+
+
 
 
 })
