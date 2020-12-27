@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Desktop/images"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Quarantinis"
+	}
+}
