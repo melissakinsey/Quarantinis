@@ -8,14 +8,14 @@ body::before {
     right: 0;
     bottom: 0;
     top: 0;
-    position: fixed;
+    /* position: fixed; */
 }
 @media (max-width: 512px)  and (-webkit-min-device-pixel-ratio: 1.5),
        (max-width: 512px)  and (min-resolution: 1.5dppx),
        (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
        (max-width: 1024px) and (max-resolution: 1.5dppx) {
   body::before {
-    background-image: url("images/barlights-screened.jpg");
+    background-image: url("images/barlights.jpg");
   }
 }
 @media (min-width: 513px)  and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
@@ -23,23 +23,24 @@ body::before {
        (min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
        (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
   body::before {
-    background-image: url("images/barlights-screened.jpg");
+    background-image: url("images/barlights.jpg");
   }
 }
 @media (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.5),
        (min-width: 1025px) and (min-resolution: 1.5dppx),
        (min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
        (min-width: 2049px) and (max-resolution: 1.5dppx) {
-  body::before {
-    background-image: url("images/barlights-screened.jpg");
+  body::before.multi-bg {
+    background-image: url("images/barlights.jpg");
   }
 }
-body .demo-blog {
+
+body .demo-blog.multi-bg {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
-
 .demo-blog .demo-blog__posts {
-  max-width: 900px;
+  background-repeat: no-repeat;
+  max-width: 1200px;
   padding: 0;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,7 +51,6 @@ body .demo-blog {
       -ms-flex-negative: 0;
           flex-shrink: 0;
 }
-
 .demo-blog.mdl-layout .mdl-layout__content {
   padding-top: 230px;
   position: relative;
