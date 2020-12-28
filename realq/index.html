@@ -7,7 +7,7 @@
   <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
   <meta name="viewport" 
   content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>Material Design Lite</title>
+  <title>Quarantinis</title>
   
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -68,7 +68,7 @@
                   </div>
                   
                   
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="random-cocktail">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="random-cocktails">
                     Random cocktail
                   </button>
                   
@@ -83,9 +83,9 @@
               <span class="visuallyhidden">add</span>
             </button>
             <div>
-            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
+            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600" id="ingredients">
             </div>
-            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600" >
               <div>
                 <strong id="cocktail-name"></strong>
                 </div>
@@ -135,8 +135,6 @@
                       </button>
                     </div>  
                   </div>
-                  <div class="mdl-card__supporting-text mdl-color-text--grey-600 recipe">
-                  </div>          
                     <h3><iframe
                       id="player"
                       type="text/html"
