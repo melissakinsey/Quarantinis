@@ -45,7 +45,6 @@ body .demo-blog {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 #search {
   margin-right: 50px;
   margin-left: 0px;
@@ -87,8 +86,17 @@ mdl-textfield__input {
       -ms-flex-negative: 0;
           flex-shrink: 0;
 }
-#jazz {margin-left: 10px;
+.music {
+  margin: 10px;
+  padding: 20px;
+  background-color: transparent;
 }
+.music-button {
+  vertical-align: center;
+}
+.pandemic {
+  text-align: center;
+  vertical-align: middle;}
 #ingredients {
   background-image: url(images/napkin.jpg);
   background-size: contain;
@@ -99,14 +107,13 @@ button.mdl-button {
   color: white;
   font-size: 1rem;
 }
-  
 
 .force-opaque::placeholder {
   opacity: 1;
 }
 
 p {
-  margin: 2rem;
+  margin: 0.5rem;
 }
 
 .demo-blog.mdl-layout .mdl-layout__content {
@@ -114,7 +121,8 @@ p {
   position: relative;
   -webkit-overflow-scrolling: touch;
 }
-.demo-blog .mdl-card {
+/*.demo-blog .mdl-card*/ 
+#ingredients  {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -126,6 +134,15 @@ p {
           align-items: stretch;
   min-height: 360px;
 }
+#intoxicated {
+  height: 10px;
+  align-self: center;
+  margin-bottom: 30px;
+}
+#instructions {
+  height: 30px;
+}
+
 .demo-blog .mdl-card__title {
   padding: 16px;
   -webkit-flex-grow: 1;
@@ -351,10 +368,6 @@ div.mdl-card__media mdl-color-text--grey-50 {
 .demo-blog--blogpost .custom-header {
   background-color: transparent;
 }
-.demo-blog--blogpost .demo-blog__posts > .mdl-card .mdl-card__media {
-  background-image: url('images/road_big.jpg');
-  height: 580px;
-}
 
 .demo-blog--blogpost .meta > * {
   -webkit-align-items: center;
@@ -399,8 +412,14 @@ div.mdl-card__media mdl-color-text--grey-50 {
 
 /* Fixes for IE 10 */
 .mdl-grid {
+  margin-top: 0px;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
 }
+.pandemic {
+  padding: 10px;
+  height: 30px;
+}
+
 
