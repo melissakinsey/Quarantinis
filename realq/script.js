@@ -85,20 +85,24 @@ function queryYoutube() {
 })
 }
 
-$("#search").on("click", function() {
+$("#search").on("click", function(event) {
+  event.preventDefault();
   queryCocktailName();
 })
-$("#random-cocktails").on("click", function() {
+$("#random-cocktails").on("click", function(event) {
+  event.preventDefault();
   queryRandomCocktails()
 })
 
-$(document).on("click", ".music-button", function() {
+$(document).on("click", ".music-button", function(event) {
+  event.preventDefault();
   var searchYoutube = $(this).attr("data-name");
   searchVideo.push(searchYoutube);
   queryYoutube();
 })
 
-$("#plus-sign").on("click", function () {
+$("#plus-sign").on("click", function (event) {
+  event.preventDefault();
   $("#favorites").empty()
   var newCocktail = $("#cocktail-name").html()
   if (newCocktail) {
@@ -110,7 +114,8 @@ $("#plus-sign").on("click", function () {
   renderFavorites();
 })
 
-$(document).on("click", ".favoriteCocktails", function() {
+$(document).on("click", ".favoriteCocktails", function(event) {
+  event.preventDefault();
   var cocktailName = $(this).attr("data-name")
   cocktails.push(cocktailName)
   queryCocktailName()
