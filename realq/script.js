@@ -27,7 +27,7 @@ function queryRandomCocktails() {
         }
       }
         var pic = response.drinks[0].strDrinkThumb
-        var photo = $(".demo-blog .coffee-pic .mdl-card__media")
+        var photo = $(".demo-blog .cocktail-pic .mdl-card__media")
         photo.attr("style", "background-image: url(" + pic + ")")
     })
 }
@@ -55,7 +55,7 @@ function queryCocktailName() {
       }
     }
     var pic = response.drinks[0].strDrinkThumb
-    var photo = $(".demo-blog .coffee-pic .mdl-card__media")
+    var photo = $(".demo-blog .cocktail-pic .mdl-card__media")
     photo.attr("style", "background-image: url(" + pic + ")")
   })
 }
