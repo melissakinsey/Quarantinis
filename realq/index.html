@@ -46,8 +46,17 @@
 
       <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
         <main class="mdl-layout__content">
+
           <div class="demo-blog__posts mdl-grid">
-            <div class="mdl-card cocktail-pic mdl-cell mdl-cell--5-col">
+          <!--Instructions-->
+          <div class="mdl-card mdl-cell mdl-cell--10-col" id="intoxicated">
+            <h2>Until you're inoculated, stay intoxicated!</h2>
+            <div id="instructions"><p>Find a cocktail and relax! Search for cocktail recipes below, or click "Random Cocktail" and try something new. Then find a little background music and enjoy.</p>
+            </div>
+          </div>
+
+
+            <div class="mdl-card cocktail-pic mdl-cell mdl-cell--6-col">
               <div class="mdl-card__media mdl-color-text--grey-50">
                 
               </div>
@@ -101,39 +110,41 @@
             </div>
           </div>
              <!--BEGIN COCKTAIL RECIPES CARD-->
-          <div class="mdl-card mdl-cell mdl-cell--10-col">
-            <h2>Until you're inoculated, stay intoxicated!</h2>
-            <div id="instructions"><p>Find a cocktail and relax! Search for cocktail recipes below, or click "Random Cocktail" and try something new. Then find a little background music and enjoy.</p>
-            </div>
+          <div class="mdl-card mdl-cell mdl-cell--7-col">
             <div class="mdl-card__media mdl-color-text--grey-50 ">
               <h1>Cocktail Recipe</h1>
             </div>
-            <div class="mdl-card__supporting-text mdl-color-text--grey-600 recipe">
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 recipe">
             </div>
-            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-            </div>
+          </div>
 <!--BEGIN PANDEMIC PLAYER-->
-              <div class="mdl-card mdl-cell mdl-cell--12-col">
-              </div>
-                <div class="mdl-card__media mdl-color-text--grey-50">
+              <div class="mdl-card mdl-cell mdl-cell--10-col">
+              
+                <div class="mdl-card__media mdl-color-text--grey-50 pandemic" >
                   <h1>Pandemic Player</h1>
                   <br>
                 </div>
-                  <div>
+              </div>
+                
+                  <div class="mdl-card mdl-cell  mdl-cell--5-col music" >
                     <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="jazz" data-name="jazz">
                       jazz
                     </button>
+                    <br>
                     <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="christmas" data-name="christmas-cafe">
                       christmas cafe</button>
+                      <br>
                  <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="bossa" data-name="italian-bossa">
                         Italian bossa       
                       </button>
+                      <br>
                       <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="Instrumental" data-name="ibizachill">
                         instrumental
                       </button>
-                    </div>  
                   </div>
-                    <h3><iframe
+             
+                      <div class="mdl-card   mdl-cell--5-col" style="float: left;">
+                      <h3 ><iframe 
                       id="player"
                       type="text/html"
                       width="400"
@@ -141,8 +152,16 @@
                       frameborder="0"
                       allow="autoplay">
                     </iframe>        
-                  </h3> 
+                  </h3>  
                 </div>
+                    </div> 
+
+                  </div>
+                    
+                </div>
+        </main>
+                </div>
+              </div>
               </body>
               </html>
               
