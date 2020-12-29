@@ -68,7 +68,7 @@ h2 {
 }
 
 mdl-textfield__input {
-  padding-left: 30px;
+  padding-left: 10px;
 }
 .demo-blog .demo-blog__posts {
   background-repeat: no-repeat;
@@ -96,7 +96,12 @@ mdl-textfield__input {
 }
 .pandemic {
   text-align: center;
-  vertical-align: middle;}
+  vertical-align: middle;
+  padding: 10px;
+  height: 30px;
+  justify-content: center;
+  background-color: #827e45
+}
 #ingredients {
   background-image: url(images/napkin.jpg);
   background-size: contain;
@@ -139,6 +144,12 @@ p {
   align-self: center;
   margin-bottom: 30px;
 }
+#favorites {
+  cursor: pointer;
+}
+#recipe {
+  background-color: #827e45
+}
 #instructions {
   height: 30px;
 }
@@ -165,7 +176,7 @@ p {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 .demo-blog .mdl-card__media a,
 .demo-blog .mdl-card__title a {
@@ -226,7 +237,7 @@ p {
 }
 .demo-blog .meta > .meta__favorites .material-icons {
   font-size: 2em;
-  cursor: pointer;
+  /*cursor: pointer;*/
   margin-left: 12px;
 }
 .demo-blog .mdl-card .meta.meta--fill {
@@ -298,12 +309,6 @@ p {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-.demo-blog .on-the-road-again .mdl-card__media {
-  background-color: black;
-}
-.demo-blog .shopping .mdl-card__media {
-  background-color: black;
-}
 .demo-blog .demo-blog__posts > .demo-nav {
   margin: 12px 15px;
   display: -webkit-flex;
@@ -351,7 +356,7 @@ p {
 }
 .demo-blog .mdl-card h3.quote:before, .demo-blog .mdl-card h3.quote:after {
   display: block;
-  height: 2;
+  /*height: 2;*/
   font-size: 3em;
   margin-top: 0.5em;
 }
@@ -417,9 +422,6 @@ div.mdl-card__media mdl-color-text--grey-50 {
   display: -ms-flexbox !important;
   display: flex !important;
 }
-.pandemic {
-  padding: 10px;
-  height: 30px;
-}
+
 
 

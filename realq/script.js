@@ -7,6 +7,12 @@ var searchVideo = []
 var cocktails = []
 var favCocktails = []
 
+for (i=0; i < localStorage.length; i++) {
+  favCocktails.push(JSON.parse(localStorage.getItem(i)))
+}
+if (localStorage.length > 0) {
+  renderFavorites();
+}
 
 
 function queryRandomCocktails() {
@@ -64,14 +70,24 @@ function queryCocktailName() {
 
  
 function renderFavorites () {
-    var favoriteCocktails = JSON.parse(localStorage.getItem("favCocktails"))
+  $("#favorites").empty()
+  var newSet = new Set(favCocktails);
+  var favCocktailsList = Array.from(newSet);
+
+  for (i = 0; i < favCocktailsList.length; i++) {
+    localStorage.setItem(i, JSON.stringify(favCocktailsList[i]));
+    var fav = $("<p>").text(favCocktailsList[i]).addClass("favoriteCocktails").attr("data-name", favCocktailsList[i])
+    $("#favorites").append(fav)
+  }
+
+  /*var favoriteCocktails = JSON.parse(localStorage.getItem("favCocktails"))
 
     console.log(favoriteCocktails)
       for (i = 0; i < favoriteCocktails.length; i++) {
          var fav = $("<p>").text(favoriteCocktails[i]).addClass("favoriteCocktails").attr("data-name", favoriteCocktails[i])
          console.log(fav)
          $("#favorites").append(fav)
-      }
+      }*/
 }
 
 function queryYoutube() { 
@@ -103,14 +119,13 @@ $(document).on("click", ".music-button", function(event) {
 
 $("#plus-sign").on("click", function (event) {
   event.preventDefault();
-  $("#favorites").empty()
   var newCocktail = $("#cocktail-name").html()
   if (newCocktail) {
   favCocktails.push(newCocktail)
   }
-  console.log(newCocktail)
-  localStorage.setItem("favCocktails", JSON.stringify(favCocktails))
-  console.log(favCocktails)
+  //console.log(newCocktail)
+  //localStorage.setItem("favCocktails"+i, JSON.stringify(favCocktails))
+  //console.log(favCocktails)
   renderFavorites();
 })
 
