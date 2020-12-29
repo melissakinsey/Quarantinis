@@ -104,6 +104,10 @@ function queryYoutube() {
 $("#search").on("click", function(event) {
   event.preventDefault();
   queryCocktailName();
+  for (i = 0; i < favoriteCocktails.length; i++) {
+    var fav = $("<p>").text(favoriteCocktails[i]).addClass("favoriteCocktails").attr("data-name", favoriteCocktails[i])
+    console.log(fav)
+    $("#favorites").append(fav)}
 })
 $("#random-cocktails").on("click", function(event) {
   event.preventDefault();
