@@ -7,14 +7,9 @@ var searchVideo = []
 var cocktails = []
 var favCocktails = []
 
-for (i=0; i < localStorage.length; i++) {
-  favCocktails.push(JSON.parse(localStorage.getItem(i)))
-}
 if (localStorage.length > 0) {
   renderFavorites();
 }
-
-
 function queryRandomCocktails() {
     $.ajax({
     url: queryURLcocktails,
@@ -70,6 +65,10 @@ function queryCocktailName() {
 
  
 function renderFavorites () {
+  for (i=0; i < localStorage.length; i++) {
+    favCocktails.push(JSON.parse(localStorage.getItem(i)))
+  }
+  
   $("#favorites").empty()
   var newSet = new Set(favCocktails);
   var favCocktailsList = Array.from(newSet);
@@ -136,7 +135,7 @@ $(document).on("click", ".favoriteCocktails", function(event) {
   queryCocktailName()
 })
 
-renderFavorites()
+//renderFavorites()
 
 
  
