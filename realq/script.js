@@ -103,6 +103,10 @@ function queryYoutube() {
 $("#search").on("click", function(event) {
   event.preventDefault();
   queryCocktailName();
+  /*for (i = 0; i < favoriteCocktails.length; i++) {
+    var fav = $("<p>").text(favoriteCocktails[i]).addClass("favoriteCocktails").attr("data-name", favoriteCocktails[i])
+    console.log(fav)
+    $("#favorites").append(fav)}*/
 })
 $("#random-cocktails").on("click", function(event) {
   event.preventDefault();
@@ -121,13 +125,28 @@ $("#plus-sign").on("click", function (event) {
   var newCocktail = $("#cocktail-name").html()
   if (newCocktail) {
   favCocktails.push(newCocktail)
+  /*newCocktail = $("#cocktail-name").html();
+     if (favCocktails.length >= 5){  
+        favCocktails.shift();
+        favCocktails.push(newCocktail);
+
+    }else{
+    favCocktails.push(newCocktail);*/
+
   }
+  
+// this function reset the fav list
+  $("#reset").on("click", function(event){
+    event.preventDefault();
+    $("#favorites").remove();
+  localStorage.clear("")
+  })
   //console.log(newCocktail)
   //localStorage.setItem("favCocktails"+i, JSON.stringify(favCocktails))
   //console.log(favCocktails)
   renderFavorites();
 })
-
+// this function makes you display the cocktail receipe when you click the favorite cocktail list
 $(document).on("click", ".favoriteCocktails", function(event) {
   event.preventDefault();
   var cocktailName = $(this).attr("data-name")
