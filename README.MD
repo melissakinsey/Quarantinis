@@ -1,4 +1,4 @@
-This project was completed for the Columbia University Engineering Full-Stack Coding Boot Camp. Our challenge was to conceive and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests. The real-world problem we've solved is COVID angst. For details, keep reading.
+giThis project was completed for the Columbia University Engineering Full-Stack Coding Boot Camp. Our challenge was to conceive and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests. The real-world problem we've solved is COVID angst. For details, keep reading.
 
 #USER STORY
 *AS A* locked down individual in despair 

@@ -285,6 +285,7 @@ p {
 .demo-blog .cocktail-pic .mdl-card__media {
   background-image: url(images/Toast.jpg);
   object-fit: scale-down;
+  min-height: 285px;
 }
 .demo-blog .something-else .mdl-card__media {
   display: -webkit-flex;
