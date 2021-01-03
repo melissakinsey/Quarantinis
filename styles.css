@@ -142,6 +142,7 @@ p {
 }
 #favorites {
   cursor: pointer;
+  padding-bottom: 15px;
 }
 #recipe {
   justify-content: center;
@@ -168,6 +169,20 @@ p {
 #reset {
   background-color: #ffb308;
   color: white;
+}
+.reset-button {
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.minus {
+  float: left;
+  margin-left: 10px;
+}
+.favoriteCocktails {
+  float: left;
+  justify-content: left;
+  /*margin-right: 50px;*/
 }
 
 #cocktail-name {
