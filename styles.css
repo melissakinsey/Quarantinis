@@ -166,6 +166,15 @@ p {
   color: white;
 }
 
+#cocktail-name {
+  margin: 1%;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 24px;
+  font-weight: 700px;
+  color: white;
+}
+
 .mdl-chip {
   background-color: #ffb308;
   color: white;
@@ -213,9 +222,8 @@ p {
           align-items: center;
 }
 .demo-blog .mdl-card__supporting-text {
-  font-weight: 700;
-  font-family: "Cinzel", serif;
-  font-size: 24px;
+  font-family: "Helvetica";
+  font-size: 21px;
   color: white;
   justify-content: center;
   align-items: flex-end;
