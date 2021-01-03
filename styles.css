@@ -136,6 +136,10 @@ p {
   align-self: center;
   margin-bottom: 30px;
 }
+#youtube {
+  background-image: url(images/Youtube-thumbnail.png);
+  background-size: contain;
+}
 #favorites {
   cursor: pointer;
 }
