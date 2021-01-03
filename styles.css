@@ -1,5 +1,6 @@
 
 body::before {
+    background-image: url("images/barlights.jpg");
     background-size: cover;
     background-attachment: fixed;
     content: '';
@@ -19,7 +20,7 @@ body::before {
     background-image: url("images/barlights.jpg");
     background-size: cover;
   }
-}
+  }
 @media (min-width: 513px)  and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5),
        (min-width: 513px)  and (max-width: 1024px) and (min-resolution: 1.5dppx),
        (min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
@@ -109,6 +110,7 @@ button.mdl-button {
 
 p {
   margin: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .demo-blog.mdl-layout .mdl-layout__content {
@@ -159,6 +161,26 @@ p {
   margin: 2rem;
 }
 
+#reset {
+  background-color: #ffb308;
+  color: white;
+}
+
+#cocktail-name {
+  margin: 1%;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  font-size: 24px;
+  font-weight: 700px;
+  color: white;
+}
+
+.mdl-chip {
+  background-color: #ffb308;
+  color: white;
+  margin: 10% 10% 10% 10%;
+}
+
 .demo-blog .mdl-card__title {
   padding: 16px;
   -webkit-flex-grow: 1;
@@ -200,9 +222,8 @@ p {
           align-items: center;
 }
 .demo-blog .mdl-card__supporting-text {
-  font-weight: 700;
-  font-family: "Cinzel", serif;
-  font-size: 24px;
+  font-family: "Helvetica";
+  font-size: 21px;
   color: white;
   justify-content: center;
   align-items: flex-end;
@@ -249,13 +270,13 @@ p {
 .demo-blog .meta > .meta__favorites .material-icons {
   font-size: 2em;
   /*cursor: pointer;*/
-  margin-left: 12px;
+  /* margin-left: 12px; */
 }
 .demo-blog .mdl-card .meta.meta--fill {
   background-color: #827e45;
-  -webkit-justify-content: space-between;
+  -webkit-justify-content: center;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: center;
   font-family: "Cinzel", serif;
   font-size: 20px;
   color: white;
@@ -309,6 +330,7 @@ p {
   -webkit-transform: translate(0px, -28px);
           transform: translate(0px, -28px);
 }
+
 .demo-blog .something-else .mdl-card__media {
   font-size: 13px;
   font-weight: 500;
@@ -443,10 +465,10 @@ div#recipe.mdl-card__media mdl-color-text--grey-50.pandemic {
 }
 
 h1 {
-  margin: 2rem;
+  margin: 1rem;
   text-align: center;
   font-family: "Cinzel", serif;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: #ffb308;
 }
@@ -454,7 +476,8 @@ h1 {
 h2 {
   /* line-height: 1; */
   margin: 1%;
-  text-align: center;
+  justify-content: center;
+  /* text-align: center; */
   font-family: "Cinzel", serif;
   font-size: 24px;
   font-weight: 700px;

@@ -97,7 +97,7 @@ User experience meets the following guidelines:
 #LESSONS LEARNED 
 * Git reset is our friend
 * Using the Kanban board would've helped us avoid duplication of effort
-* A template isn't necessarily a great solution for a beginner because the code contains tons of cruf. In this case, there were lots of pages, menus, and other elements we didn't need. The elements we did use contained styles inherited from these unused parents, making it hard to make the elements behave.
+* A template isn't necessarily a great solution for a beginner because the code contains tons of cruf. In this case, there were lots of pages, menus, and other elements we didn't need. The elements we did use contained styles inherited from these unused parents, making it hard to make the retained elements behave.
 
 #IMAGE CREDITS
 
