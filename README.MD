@@ -1,19 +1,28 @@
+giThis project was completed for the Columbia University Engineering Full-Stack Coding Boot Camp. Our challenge was to conceive and execute a design that solves a real-world problem by integrating data received from multiple server-side API requests. The real-world problem we've solved is COVID angst. For details, keep reading.
+
+#USER STORY
+*AS A* locked down individual in despair 
+*I WANT TO* receive cocktail and music pairings 
+*SO I CAN* drown my sorrow and find solace.
+
 #PROJECT OVERVIEW
 
 By now, I think we can all agree that 2020 was a real cluster. Most of us held it together only with considerable help from adult beverages. Netflix, Instacart, and Franzia kept us from losing our minds while cooped up with hyperactive children, pandemic puppies, and partners we'd like to get some social distance from. As the contagion continued, sidewalks became social clubs. Day drinking on Zoom replaced gossiping at the water cooler. And in cul-de-sacs across the country, driveway drinking helped parents avoid costly virtual visits to therapists and divorce attorneys. Thanks, alcohol!
 
-We've designed an app to keep the party going. Chillax to some smooth tunes, and shelter in place with the perfect quarantini. Until inoculation is available, intoxication will have to do. So put on your best velour track suit, kick back in the La-Z-Boy, and raise your glass to the new year. It's 5 o'clock somewhere, and 2020 is over everywhere.
+We've designed an app to keep the party going. Chillax to some smooth tunes, and shelter in place with the perfect quarantini. Until inoculation is available, intoxication will have to do. So put on your snazziest velour track suit, kick back in the La-Z-Boy, and raise your glass to the new year. It's 5 o'clock somewhere, and 2020 is over everywhere.
 
 #FEATURES
 
 ##Alcohol
 ###Random Cocktail
-Look, we all have our favorite drinks. But do you really want to wake up to Groundhog Day again? To mix it up a little, click the "Random Cocktail" button for a suggested new beverage. Each suggestion is accompanied by a list of ingredients, a photo of the drink, and instructions for making and serving it. The recipes are supplied by The Cocktail DB, an open, crowd-sourced database cocktails from around the world.
+Look, habits have their place in the coronapocalypse. Faced with a dwindling supply of toilet paper and pasta sauce, binge-watching The Office night after night while alternately doomscrolling and panic-noshing spicy chicken wings is undeniably comforting. Lather, rinse, repeat. But do we really want the cocktail hour to feel like Groundhog Day? 
+
+To make Tuesday feel like a coronacation, the Quarantinis app offers a "Random Cocktail" button. Think of it as a slot machine for booze. Each cocktail recipe is accompanied by a list of ingredients, a photo of the drink, and instructions for making and serving it. The recipes are supplied by The Cocktail DB, an open, crowd-sourced database of cocktails from around the world. You might find yourself quaffing a pisco sour from Peru or a szarlotka from Poland. Come on, treat yo' self! 
 
 [!images/TheCocktailDB.jpg]
 
 ###Favorites List
-When you find a new go-to beverage, click the plus sign to add the drink to your favorites list. The drink and recipe will be saved so you'll have it handy.
+When you find a new go-to beverage, click the plus sign to add the drink to your Favorites list. The drink and recipe will be saved, so you'll have it handy next time you make it. (We can't let that bottle of Polish vodka go to waste, right?)
 
 ##Music
 ##Music Videos
