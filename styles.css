@@ -60,6 +60,7 @@ body .demo-blog {
 
 mdl-textfield__input {
   padding-left: 10px;
+  width: 30px;
 }
 
 .mdl-card {
@@ -97,8 +98,9 @@ mdl-textfield__input {
   background-color: #827e45
 }
 #ingredients {
+  background-color: #b9b46e;
   background-image: url(images/napkin.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 button.mdl-button {
