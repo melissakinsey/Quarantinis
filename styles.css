@@ -106,7 +106,6 @@ button.mdl-button {
   min-width: 80%;
   max-width: 100%;
   margin:10px;
-  float: left;
   align-self: center;
   background-color: #ffb308;
 }
