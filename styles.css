@@ -60,7 +60,6 @@ body .demo-blog {
 
 mdl-textfield__input {
   padding-left: 10px;
-  width: 30px;
 }
 
 .mdl-card {
@@ -71,14 +70,15 @@ mdl-textfield__input {
   background-repeat: no-repeat;
   max-width: 1200px;
   padding-top: 10%;
-  padding-right: 20%;
+  padding-right: 10%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  /* width: 100%; */
+  /* ==width: 100%; */
 /* margin: 0 auto; */
-  margin-left: 30%;
-  margin-right: -15%;
+justify-content: center;  
+margin-left: 10%;
+  margin-right: 0%;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
@@ -148,6 +148,9 @@ p {
 #intoxicated {
   align-self: center;
   margin-bottom: 30px;
+}
+.field {
+  max-width: 70%;
 }
 #youtube {
   background-image: url(images/Youtube-thumbnail.png);
