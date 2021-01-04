@@ -78,18 +78,16 @@ mdl-textfield__input {
           flex-shrink: 0;
 }
 .music {
-  margin: 10px;
-  padding: 20px;
+  padding: 0px;
   background-color: transparent;
-}
-.music-button {
-  vertical-align: center;
+  min-height: 0px;
+  margin: 8px;
+  align-items: center;
 }
 .pandemic {
   text-align: center;
   vertical-align: middle;
   padding: 10px;
-  height: 30px;
   justify-content: center;
   background-color: #827e45
 }
@@ -102,6 +100,15 @@ button.mdl-button {
   background-color: #827e45;
   color: white;
   font-size: 1rem;
+}
+.music-button {
+  vertical-align: center;
+  min-width: 80%;
+  max-width: 100%;
+  margin:10px;
+  float: left;
+  align-self: center;
+  background-color: #ffb308;
 }
 
 .force-opaque::placeholder {
@@ -175,15 +182,15 @@ p {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.minus {
+/*.minus {
   float: left;
   margin-left: 10px;
 }
 .favoriteCocktails {
   float: left;
   justify-content: left;
-  /*margin-right: 50px;*/
-}
+  /*margin-right: 50px;
+}*/
 
 #cocktail-name {
   margin: 1%;
@@ -210,6 +217,7 @@ p {
 .demo-blog .mdl-card__media.pandemic {
   box-sizing: border-box;
   background-size: cover;
+  min-height: 50px;
   padding: 1rem;
   display: -webkit-flex;
   display: -ms-flexbox;
