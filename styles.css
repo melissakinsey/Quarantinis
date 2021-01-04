@@ -152,7 +152,7 @@ p {
 }
 #youtube {
   background-image: url(images/Youtube-thumbnail.png);
-  background-size: contain;
+  background-size: cover;
 }
 #favorites {
   cursor: pointer;
