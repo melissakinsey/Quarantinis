@@ -17,56 +17,53 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-  
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <!-- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF"> -->
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="./config.js"></script>
+  <script type="text/javascript" src="script.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="./config.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-orange.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    
-    <style>
-      #view-source {
-        position: fixed;
-        display: block;
-        right: 0;
-        bottom: 0;
-        margin-right: 40px;
-        margin-bottom: 40px;
-        z-index: 900;
-      }
-    </style>
-  </head>
+  <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+  </style>
+</head>
+
   <body>
+    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">
+        <div class="demo-blog__posts mdl-grid">
 
-      <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
-        <main class="mdl-layout__content">
-
-          <div class="demo-blog__posts mdl-grid">
           <!--Instructions-->
           <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop" id="intoxicated">
             <h1>Until you're inoculated, stay intoxicated!</h1>
-            <div id="instructions"><p>Find a cocktail and relax! Search for cocktail recipes below, or click "Random Cocktail" and try something new. Then find a little background music and enjoy.</p>
+            <div id="instructions">
+              <p>Find a cocktail and relax! Search for cocktail recipes below, or click "Random Cocktail" and try something new. 
+                Then find a little background music and enjoy.
+              </p>
             </div>
           </div>
-<!-- START COCKTAIL SEARCH CARD -->
-            <div class="mdl-card  mdl-cell mdl-cell--12-col mdl-cell--6-col-desktop">
-              <div class="mdl-card__media mdl-color-text--grey-50 cocktail-pic">
-                
-              </div>
+
+          <!-- START COCKTAIL SEARCH CARD -->
+          <div class="mdl-card  mdl-cell mdl-cell--12-col mdl-cell--6-col-desktop">
+            <div class="mdl-card__media mdl-color-text--grey-50 cocktail-pic">
+            </div>
              
-              <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-                <div class="cocktail-buttons">
-                </button>
-                
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="cocktail-buttons">                
                 <form action="#">
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label field">
                     <input class="mdl-textfield__input" type="text" id="cocktail-search" style="float: left;">
@@ -74,22 +71,20 @@
                     <button class="mdl-button mdl-js-button mdl-button--raised" id="search">
                       Search
                     </button>
-                    
-                    
-                    
                   </div>
-                  
+      
                   <div>
-                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="random-cocktails">
-                    Random cocktail
-                  </button>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="random-cocktails">
+                      Random cocktail
+                    </button>
                   </div>
                 </form>
                 
               </div>
             </div>
           </div>
-<!--START INGREDIENTS CARD-->
+
+          <!--START INGREDIENTS CARD-->
           <div class="mdl-card something-else mdl-cell mdl-cell--12-col mdl-cell--6-col-desktop" style="position: relative;">
             <button id="plus-sign" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent">
               <i class="material-icons mdl-color-text--white" role="presentation">add</i>
@@ -99,94 +94,85 @@
             <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600" id="ingredients">
             </div>
             <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600" class="cocktail-name-card" style="align-self: flex-end;">
-                <div id="cocktail-name">Cocktail
-
-                </div>
+              <div id="cocktail-name">Cocktail
               </div>
+            </div>
           </div>
-   <!--BEGIN FAVORITES-->
+
+          <!--BEGIN FAVORITES-->
           <div class="mdl-card something-else mdl-cell mdl-cell--12-col mdl-cell--5-col-desktop">
             <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600" id="favorites-card">
-              <div>
+              <div class="card-4-title">
                 <h2 class="favorite-title">Favorites</h2>
               </div>
-              
-              
             </div>
-            <!--<span class="mdl-chip mdl-chip--deletable">
-              <span class="mdl-chip__text">Clear Favorites</span>
-              <button type="button" class="mdl-chip__action"><i class="material-icons" id="reset">cancel</i></button>
-          </span>-->
-          <div class="reset-button">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="reset">
-            Clear Favorites
-          </button>
-</div>
+
+            <div class="reset-button">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="reset">
+                Clear Favorites
+              </button>
+            </div>
+
             <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600" id="favorites">
             </div>
           </div>
-    <!--BEGIN COCKTAIL RECIPES CARD-->
+
+          <!--BEGIN COCKTAIL RECIPES CARD-->
           <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--7-col-desktop">
-          <!--mdl-cell--7-col">-->
             <div class="mdl-card__media mdl-color-text--grey-50" id="recipe">
               <h2>Cocktail Recipe</h2>
             </div>
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600 recipe">
             </div>
           </div>
-<!--BEGIN PANDEMIC PLAYER-->
-              <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop" style="background-color: tomato; min-height: 0px">
-              
-                <div class="mdl-card__media mdl-color-text--grey-50 pandemic">
-                  <h2>Pandemic Player</h2>
-                
-                </div>
-              </div>
-                <div class="mdl-card mdl-cell mdl-cell--10-col mdl-cell--5-col-desktop music">
 
-                  <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="jazz" data-name="jazz" style="background-color: #ffb308;">
-                    jazz
-                  </button>
-              
-                  <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="christmas" data-name="christmas-cafe" style="background-color: #ffb308;">
-                    christmas cafe</button>
-                </div>
-                
-                    <div class="mdl-card mdl-cell mdl-cell--10-col mdl-cell--5-col-desktop music">
+          <!--BEGIN PANDEMIC PLAYER-->
+          <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop" style="min-height: 0px">
+            <div class="mdl-card__media mdl-color-text--grey-50 pandemic">
+              <h2>Pandemic Player</h2>
+            </div>
+          </div>
 
-               <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="bossa" data-name="italian-bossa" style="background-color: #ffb308;">
-                      Italian bossa       
-                    </button>
-                    
-                    <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="Instrumental" data-name="ibizachill" style="background-color: #ffb308;">
-                      instrumental
-                    </button>
-                    </div>
-             
+          <!--YOUTUBE BUTTONS-->
+          <div class="mdl-card mdl-cell mdl-cell--10-col mdl-cell--5-col-desktop music">
+            <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="jazz" data-name="jazz" style="background-color: #ffb308;">
+              jazz
+            </button>
+              
+            <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="christmas" data-name="christmas-cafe" style="background-color: #ffb308;">
+              christmas cafe
+            </button>
+          </div>
                 
+          <div class="mdl-card mdl-cell mdl-cell--10-col mdl-cell--5-col-desktop music">
+            <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="bossa" data-name="italian-bossa" style="background-color: #ffb308;">
+              Italian bossa       
+            </button>
+              
+            <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="Instrumental" data-name="ibizachill" style="background-color: #ffb308;">
+              instrumental
+            </button>
+          </div>
              
-                      <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop" id="youtube">
-                      <h3 ><iframe 
-                      id="player"
-                      type="text/html"
-                      width="400"
-                      height="300"
-                      frameborder="0"
-                      allow="autoplay">
-                    </iframe>        
-                  </h3>  
-                </div>
-                    </div> 
-                    <footer class="mdl-mini-footer">
-                      <div class="mdl-mini-footer--left-section">            
-                      </div>
-            
-                  </div>
+          <!--YOUTUBE PLAYER-->
+          <div class="mdl-card mdl-cell mdl-cell--12-col mdl-cell--12-col-desktop" id="youtube">
+            <iframe 
+              id="player"
+              type="text/html"
+              width="400"
+              height="300"
+              frameborder="0"
+              allow="autoplay">
+            </iframe>        
+          </div>
+        </div>
+
+        <!--FOOTER-->
+          <footer class="mdl-mini-footer">
+          </footer>
+      </main>
+    </div>
                     
-                </div>
-        </main>
-                </div>
-              </div>
-              </body>
-              </html>
+  </body>
+</html>
               
