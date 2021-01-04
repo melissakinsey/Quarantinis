@@ -61,6 +61,11 @@ body .demo-blog {
 mdl-textfield__input {
   padding-left: 10px;
 }
+
+.mdl-card {
+  border-radius: 30px;
+}
+
 .demo-blog .demo-blog__posts {
   background-repeat: no-repeat;
   max-width: 1200px;
@@ -130,6 +135,7 @@ p {
       -ms-flex-align: stretch;
           align-items: stretch;
   min-height: 360px;
+  border-radius: 30px;
 }
 #intoxicated {
   height: 10px;
@@ -159,6 +165,10 @@ p {
 #instructions {
   height: 30px;
   margin: 2rem;
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
 
 #reset {
@@ -174,6 +184,7 @@ p {
   font-weight: 700px;
   color: white;
 }
+
 
 .mdl-chip {
   background-color: #ffb308;
@@ -227,6 +238,7 @@ p {
   color: white;
   justify-content: center;
   align-items: flex-end;
+  border-radius: 30px;
 }
 .demo-blog .mdl-card__media ~ .mdl-card__supporting-text {
   min-height: 64px;
@@ -336,6 +348,8 @@ p {
   font-weight: 500;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .demo-blog .something-else .mdl-card__media img {
   width: 164px;
@@ -466,6 +480,7 @@ div#recipe.mdl-card__media mdl-color-text--grey-50.pandemic {
 
 h1 {
   margin: 1rem;
+  margin-bottom: 0%;
   text-align: center;
   font-family: "Cinzel", serif;
   font-size: 28px;
@@ -491,4 +506,24 @@ div.favorite-title {
   font-size: 24px;
   font-weight: 700px;
   color: white;
+}
+.mdl-card {
+  border-radius: 30px;
+}
+
+.mdl-button {
+  border-radius: 30px;
+}
+
+.demo-blog .something-else .mdl-card__supporting-text {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+#favorites-card {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
