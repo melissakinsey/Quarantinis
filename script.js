@@ -63,7 +63,7 @@ function queryCocktailName() {
 }
 
 function renderFavorites () {
-  for (i =0; i < localStorage.length; i++) {
+  for (i = 0; i < localStorage.length; i++) {
     favCocktails.push(JSON.parse(localStorage.getItem(i)))
   }
   console.log(favCocktails)
@@ -71,7 +71,7 @@ function renderFavorites () {
   var newSet = new Set(favCocktails);
   var favCocktailsList = Array.from(newSet);
 
-  for (i = 0; i < 10; i++) {
+  for (i = localStorage.length; i >= 0; i--) {
     if (favCocktailsList[i] !== null) {
     localStorage.setItem(i, JSON.stringify(favCocktailsList[i]));
      // var favDiv = $("<div>").addClass("fav-div")
