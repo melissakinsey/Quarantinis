@@ -94,11 +94,12 @@
               <i class="material-icons mdl-color-text--white" role="presentation">add</i>
               <span class="visuallyhidden">add</span>
             </button>
+
             <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600" id="ingredients">
             </div>
             <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600" >
               <div>
-                <div id="cocktail-name"></div>
+                <div id="cocktail-name">Cocktail</div>
                 </div>
               </div>
           </div>
@@ -111,10 +112,15 @@
               
               
             </div>
-            <span class="mdl-chip mdl-chip--deletable">
-              <span class="mdl-chip__text">Reset Favlist</span>
+            <!--<span class="mdl-chip mdl-chip--deletable">
+              <span class="mdl-chip__text">Clear Favorites</span>
               <button type="button" class="mdl-chip__action"><i class="material-icons" id="reset">cancel</i></button>
-          </span>
+          </span>-->
+          <div class="reset-button">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="reset">
+            Clear Favorites
+          </button>
+</div>
             <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600" id="favorites">
             </div>
           </div>
@@ -127,32 +133,37 @@
             </div>
           </div>
 <!--BEGIN PANDEMIC PLAYER-->
-              <div class="mdl-card mdl-cell mdl-cell--10-col">
+              <div class="mdl-card mdl-cell mdl-cell--10-col" style="background-color: tomato; min-height: 0px">
               
-                <div class="mdl-card__media mdl-color-text--grey-50 pandemic" >
+                <div class="mdl-card__media mdl-color-text--grey-50 pandemic">
                   <h2>Pandemic Player</h2>
                 
                 </div>
               </div>
+                <div class="mdl-card mdl-cell mdl-cell--5-col music">
+
+                  <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="jazz" data-name="jazz" style="background-color: #ffb308;">
+                    jazz
+                  </button>
+              
+                  <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="christmas" data-name="christmas-cafe" style="background-color: #ffb308;">
+                    christmas cafe</button>
+                </div>
                 
-                  <div class="mdl-card mdl-cell  mdl-cell--5-col music" >
-                    <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="jazz" data-name="jazz">
-                      jazz
+                    <div class="mdl-card mdl-cell mdl-cell--5-col  music">
+
+               <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="bossa" data-name="italian-bossa" style="background-color: #ffb308;">
+                      Italian bossa       
                     </button>
-                    <br>
-                    <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="christmas" data-name="christmas-cafe">
-                      christmas cafe</button>
-                      <br>
-                 <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="bossa" data-name="italian-bossa">
-                        Italian bossa       
-                      </button>
-                      <br>
-                      <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="Instrumental" data-name="ibizachill">
-                        instrumental
-                      </button>
-                  </div>
+                    
+                    <button class="mdl-button mdl-js-button mdl-button--raised music-button" id="Instrumental" data-name="ibizachill" style="background-color: #ffb308;">
+                      instrumental
+                    </button>
+                    </div>
              
-                      <div class="mdl-card   mdl-cell--5-col" style="float: left;">
+                
+             
+                      <div class="mdl-card mdl-cell mdl-cell--10-col" id="youtube">
                       <h3 ><iframe 
                       id="player"
                       type="text/html"
