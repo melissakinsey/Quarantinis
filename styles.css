@@ -133,7 +133,10 @@ button.mdl-button {
       -ms-flex-align: stretch;
           align-items: stretch;
   min-height: 450px;
-  border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 #intoxicated {
   align-self: center;
@@ -510,12 +513,16 @@ div.favorite-title {
 .demo-blog .something-else .mdl-card__supporting-text {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
 }
 #favorites-card {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
+}
+
+mdl-card__media mdl-color--white mdl-color-text--grey-600 {
+  background-color: #b9b46e;
 }
