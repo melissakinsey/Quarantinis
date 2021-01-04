@@ -553,3 +553,7 @@ div.favorite-title {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+
+mdl-card__media mdl-color--white mdl-color-text--grey-600 {
+  background-color: #b9b46e;
+}
