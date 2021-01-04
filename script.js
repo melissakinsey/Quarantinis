@@ -28,7 +28,7 @@ function queryRandomCocktails() {
         }
       }
         var pic = response.drinks[0].strDrinkThumb
-        var photo = $(".demo-blog .cocktail-pic .mdl-card__media")
+        var photo = $(".cocktail-pic")
         photo.attr("style", "background-image: url(" + pic + ")")
     })
 }
@@ -56,14 +56,14 @@ function queryCocktailName() {
       }
     }
     var pic = response.drinks[0].strDrinkThumb
-    var photo = $(".demo-blog .cocktail-pic .mdl-card__media")
+    var photo = $(".cocktail-pic")
     photo.attr("style", "background-image: url(" + pic + ")")
   })
 }
 }
 
 function renderFavorites () {
-  for (i=0; i < localStorage.length; i++) {
+  for (i =0; i < localStorage.length; i++) {
     favCocktails.push(JSON.parse(localStorage.getItem(i)))
   }
   console.log(favCocktails)

@@ -70,14 +70,15 @@ mdl-textfield__input {
   background-repeat: no-repeat;
   max-width: 1200px;
   padding-top: 10%;
-  padding-right: 20%;
+  padding-right: 10%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  /* width: 100%; */
+  /* ==width: 100%; */
 /* margin: 0 auto; */
-  margin-left: 30%;
-  margin-right: -15%;
+justify-content: center;  
+margin-left: 10%;
+  margin-right: 0%;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
@@ -87,6 +88,7 @@ mdl-textfield__input {
   background-color: transparent;
   min-height: 0px;
   margin: 8px;
+  margin-bottom: 0px;
   align-items: center;
 }
 .pandemic {
@@ -97,8 +99,11 @@ mdl-textfield__input {
   background-color: #827e45
 }
 #ingredients {
+  padding-left: 20px;
+  min-height: 100%;
+  background-color: #b9b46e;
   background-image: url(images/napkin.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 button.mdl-button {
@@ -140,17 +145,22 @@ p {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  min-height: 360px;
+  min-height: 450px;
   border-radius: 30px;
 }
 #intoxicated {
-  height: 10px;
   align-self: center;
   margin-bottom: 30px;
 }
+.field {
+  max-width: 70%;
+}
 #youtube {
   background-image: url(images/Youtube-thumbnail.png);
-  background-size: contain;
+  background-size: cover;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  height: 100%;
 }
 #favorites {
   cursor: pointer;
@@ -174,7 +184,6 @@ p {
 }
 
 #instructions {
-  height: 30px;
   margin: 2rem;
   margin-top: 5%;
   display: flex;
@@ -250,7 +259,7 @@ p {
 .demo-blog .mdl-card__supporting-text {
   width: 100%;
   padding: 16px;
-  min-height: 64px;
+  min-height: 100px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -259,6 +268,7 @@ p {
           align-items: center;
 }
 .demo-blog .mdl-card__supporting-text {
+  line-height: 30px;
   font-family: "Helvetica";
   font-size: 21px;
   color: white;
@@ -266,9 +276,9 @@ p {
   align-items: flex-end;
   border-radius: 30px;
 }
-.demo-blog .mdl-card__media ~ .mdl-card__supporting-text {
+/*.demo-blog .mdl-card__media ~ .mdl-card__supporting-text {
   min-height: 64px;
-}
+}*/
 .demo-blog .mdl-card__supporting-text:not(:last-child) {
   box-sizing: border-box;
   min-height: 76px;
@@ -295,7 +305,7 @@ p {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: auto;
+  height: 100%;
 }
 .demo-blog .meta > .meta__favorites{
   -webkit-flex-direction: row;
@@ -340,11 +350,16 @@ p {
       -ms-flex-order: -1;
           order: -1;
 }
-
-.demo-blog .cocktail-pic .mdl-card__media {
+.cocktail-buttons {
+  height: 100%;
+  width: 100%;
+}
+.cocktail-pic {
   background-image: url(images/Toast.jpg);
+  /*background-position-y: top;*/
   object-fit: scale-down;
-  min-height: 285px;
+  min-height: 400px;
+  max-height: 100%;
 }
 .demo-blog .something-else .mdl-card__media {
   display: -webkit-flex;
@@ -444,7 +459,11 @@ p {
 .demo-blog .mdl-card h3.quote:after {
   content: '”';
 }
-
+/*.recipe {
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}*/
 div#recipe.mdl-card__media mdl-color-text--grey-50.pandemic {
   /* min-height: 4; */
   padding: 0px;
