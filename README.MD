@@ -10,11 +10,7 @@ This project was completed for the Columbia University Engineering Full-Stack Co
 
 #PROJECT OVERVIEW
 
-By now, I think we can all agree that 2020 was a real cluster. Most of us held it together only with considerable help from adult beverages. Netflix, Instacart, and Franzia kept us from losing our minds while cooped up with hyperactive children, pandemic puppies, and partners we'd like to get some social distance from. 
-
-As the contagion continued, sidewalks became social clubs. Day drinking on Zoom replaced gossiping at the water cooler. And in cul-de-sacs across the country, driveway drinking helped parents avoid costly virtual visits to therapists and divorce attorneys. Thanks, alcohol!
-
-We've designed an app to keep the party going. Chillax to some smooth tunes, and shelter in place with the perfect quarantini. Until inoculation is available, intoxication will have to do. So put on your most extra velour track suit, kick back in the La-Z-Boy, and raise your glass to the new year. It's 5 o'clock somewhere, and 2020 is over everywhere.
+Most of us held it together in 2020 only with considerable help from adult beverages. We've designed an app to keep the party going in 2021. Quarantine and chill to some smooth tunes from the Pandemic Player, and shelter in place with the perfect cocktail. Search for familiar favorites, or click "Random Cocktail" to try something new. Join us in raising a glass to the new year. Until inoculation is available, intoxication will see us through.
 
 #FEATURES
 
@@ -96,7 +92,7 @@ User experience meets the following guidelines:
 
 #LESSONS LEARNED 
 * Git reset is our friend
-* Using the Kanban board would've helped us avoid duplication of effort
+* The Kanban board could've been our friend had we not unwisely shunned it in favor of Slack. Unshun!
 * A template isn't necessarily a great solution for a beginner because the code contains tons of cruf. In this case, there were lots of pages, menus, and other elements we didn't need. The elements we did use contained styles inherited from these unused parents, making it hard to make the retained elements behave.
 
 #IMAGE CREDITS
