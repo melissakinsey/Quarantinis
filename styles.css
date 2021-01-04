@@ -99,6 +99,7 @@ margin-left: 10%;
   background-color: #827e45
 }
 #ingredients {
+  padding-left: 20px;
   min-height: 100%;
   background-color: #b9b46e;
   background-image: url(images/napkin.jpg);
@@ -157,7 +158,9 @@ p {
 #youtube {
   background-image: url(images/Youtube-thumbnail.png);
   background-size: cover;
-  margin-top: 15px
+  margin-top: 15px;
+  margin-bottom: 30px;
+  height: 100%;
 }
 #favorites {
   cursor: pointer;
@@ -302,7 +305,7 @@ p {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: auto;
+  height: 100%;
 }
 .demo-blog .meta > .meta__favorites{
   -webkit-flex-direction: row;
@@ -456,9 +459,11 @@ p {
 .demo-blog .mdl-card h3.quote:after {
   content: '”';
 }
-.recipe {
-  line-height: 2px;
-}
+/*.recipe {
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}*/
 div#recipe.mdl-card__media mdl-color-text--grey-50.pandemic {
   /* min-height: 4; */
   padding: 0px;
