@@ -287,7 +287,7 @@ button.mdl-button {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: 88px;
+  /*height: 88px;*/
   overflow: visible;
 }
 .demo-blog .meta > .meta__favorites{
@@ -537,7 +537,12 @@ div.favorite-title {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-
+.the-one { 
+  height: 150px;
+}
+.cocktail-name-card { 
+  height: 88px;
+}
 mdl-card__media mdl-color--white mdl-color-text--grey-600 {
   background-color: #b9b46e;
 }
