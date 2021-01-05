@@ -65,6 +65,7 @@ User experience meets the following guidelines:
 - Coded calls to Pandemic Player [!images/pandemic-player.jpg] and other APIs, including request functions, event listeners, and embedded video player
 - Debugged code
 - Wrote user story
+- Mobile responsiveness
 - Helped with layout and styling
 
 ##Mateo
@@ -79,7 +80,7 @@ User experience meets the following guidelines:
 - Chose Cinzel font and designed logo [!images/quarantinis-title.jpg] 
 - Chose and modified main background image and cocktail napkin image
 - Wrote tag line [!images/tagline.jpg]
-- Wrote README.md
+- Wrote README.md and app copy
 - Helped with layout and styling
 
 

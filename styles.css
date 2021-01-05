@@ -1,6 +1,6 @@
 
 body::before {
-    background-image: url("images/barlights.jpg");
+    background-image: url("images/bar-image.png");
     background-size: cover;
     background-attachment: fixed;
     content: '';
@@ -16,7 +16,7 @@ body::before {
        (max-width: 1024px) and (-webkit-max-device-pixel-ratio: 1.5),
        (max-width: 1024px) and (max-resolution: 1.5dppx) {
   body::before {
-    background-image: url("images/barlights.jpg");
+    background-image: url("images/bar-image.png");
     background-size: cover;
   }
   }
@@ -25,7 +25,7 @@ body::before {
        (min-width: 1025px) and (max-width: 2048px) and (-webkit-max-device-pixel-ratio: 1.5),
        (min-width: 1025px) and (max-width: 2048px) and (max-resolution: 1.5dppx)  {
   body::before {
-    background-image: url("images/barlights.jpg");
+    background-image: url("images/bar-image.png");
     background-size: cover;
   }
 }
@@ -34,14 +34,14 @@ body::before {
        (min-width: 2049px) and (-webkit-max-device-pixel-ratio: 1.5),
        (min-width: 2049px) and (max-resolution: 1.5dppx) {
   body::before {
-    background-image: url("images/barlights.jpg");
+    background-image: url("images/bar-image.png");
     background-size: cover;
   }
 }
 
 body .demo-blog {
   font-family: 'Roboto', 'Helvetica', sans-serif;
-  background-image: url("images/barlights.jpg");
+  background-image: url("images/bar-image.png");
   background-repeat: no-repeat;
   background-size: cover;
   line-height: 1;
@@ -142,6 +142,13 @@ button.mdl-button {
   align-self: center;
   margin-bottom: 90px;
 }
+
+#title {
+ width: 80%;
+ height: auto;
+ margin-bottom: 20%;
+}
+
 .field {
   max-width: 70%;
 }
