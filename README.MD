@@ -65,7 +65,7 @@ User experience meets the following guidelines:
 - Coded calls to Pandemic Player [!images/pandemic-player.jpg] and other APIs, including request functions, event listeners, and embedded video player
 - Debugged code
 - Wrote user story
-- Mobile responsiveness
+- Ensured mobile responsiveness
 - Helped with layout and styling
 
 ##Mateo
@@ -77,12 +77,12 @@ User experience meets the following guidelines:
 
 ##Melissa
 
+- Proposed app concept
 - Chose Cinzel font and designed logo [!images/quarantinis-title.jpg] 
 - Chose and modified main background image and cocktail napkin image
-- Wrote tag line [!images/tagline.jpg]
-- Wrote README.md and app copy
+- Wrote tag line [!images/tagline.jpg], app copy, README, and disclaimer
+- Supplied and placed screenshots in README
 - Helped with layout and styling
-
 
 ##Purna
 
@@ -92,9 +92,10 @@ User experience meets the following guidelines:
 
 
 #LESSONS LEARNED 
-* Git reset is our friend
-* The Kanban board could've been our friend had we not unwisely shunned it in favor of Slack. Unshun!
-* A template isn't necessarily a great solution for a beginner because the code contains tons of cruf. In this case, there were lots of pages, menus, and other elements we didn't need. The elements we did use contained styles inherited from these unused parents, making it hard to make the retained elements behave.
+* *Concept.* Having a clear concept is essential. Our first project idea was a tranlator/journal/vocabulary builder/day planner/habit tracker thing. (Hence our group name "The Polyglots.") We planned to use a translation API and maybe a flashcards or calendar API. But we weren't sure because we didn't have a focused idea of what we wanted to build. Would we cover all major languages? A selected few? Or just two, to keep things simple? Would the calendar track consistency (number of days a person studied in a given week, for example) or words learned? How would the app know which words a user had learned? During our second meeting, we decided to change course and pursue the quarantinis idea. It was straightforward, and we knew we could have a little fun with the concept, features, and UI. 
+* *Version control.* We had major problems with Git, especially in the beginning. In trying to untangle these snafus, we learned that git reset was our friend. We also learned about git stash (git stash list, git stash pop, git stash apply, etc.), git merge, git remote, git diff, and other version control concepts. We're total pros now! Yahahahahahahahahahahha!
+* *Project management and teamwork.* The Kanban board could've been our friend had we not unwisely shunned it in favor of Slack. Unshun! Reshun! 
+* *Template.* We discovered that a template isn't necessarily a great solution for beginners because the code contains tons of cruf. In this case, there were lots of pages, menus, and other elements we didn't need. The elements we did use contained styles inherited from these discarded parents, so it was hard to make the retained elements behave.
 
 #IMAGE CREDITS
 
@@ -110,7 +111,7 @@ Random Cocktail: https://www.thecocktaildb.com/api/json/v1/1/random.php
 Drink Thumbnails: https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg/preview (100x100 pixels)
 
 ##YouTube API
-Cocktail Music: https://www.googleapis.com/youtube/v3/search?part=snippet&q=cocktail+music
+Cocktail Music: https://www.googleapis.com/youtube/v3/search?part=snippet&q=cocktail+music [!images/Youtube-thumbnail.png]
 
 #LICENSES
 
