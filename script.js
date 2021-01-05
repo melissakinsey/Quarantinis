@@ -28,7 +28,7 @@ function queryRandomCocktails() {
       }
       var pic = response.drinks[0].strDrinkThumb;
       var photo = $(".cocktail-pic");
-      photo.attr("style", "background-image: url(" + pic + ")");
+      photo.attr("style", "background-image: url(" + pic + ")").attr("alt", "cocktail-picture");
     })
 }
 
@@ -56,7 +56,7 @@ function queryCocktailName() {
     }
     var pic = response.drinks[0].strDrinkThumb;
     var photo = $(".cocktail-pic");
-    photo.attr("style", "background-image: url(" + pic + ")");
+    photo.attr("style", "background-image: url(" + pic + ")").attr("alt", "cocktail-picture");
   })
 }
 }
