@@ -10,6 +10,7 @@ var favCocktails = []
 if (localStorage.length > 0) {
   renderFavorites();
 }
+
 function queryRandomCocktails() {
     $.ajax({
     url: queryURLcocktails,
@@ -42,7 +43,6 @@ function queryCocktailName() {
     url: queryURLsearch,
     method: "GET"
   }).then(function(response) {
-    console.log(response)
     $("#cocktail-name").text(response.drinks[0].strDrink);        
     $(".recipe").text(response.drinks[0].strInstructions)
     $("#ingredients").empty();
@@ -66,7 +66,6 @@ function renderFavorites () {
   for (i = 0; i < localStorage.length; i++) {
     favCocktails.push(JSON.parse(localStorage.getItem(i)))
   }
-  console.log(favCocktails)
   $("#favorites").empty()
   var newSet = new Set(favCocktails);
   var favCocktailsList = Array.from(newSet);
@@ -108,7 +107,7 @@ function queryYoutube() {
   url: queryURLyoutube,
   method: "GET"
 }).then(function(response) {
-    var videoSource = "http://www.youtube.com/embed/" + response.items[0].id.videoId + "?autoplay=1"
+    var videoSource = "https://www.youtube.com/embed/" + response.items[0].id.videoId + "?autoplay=1"
     $("#player").attr("src", videoSource)
 })
 }
@@ -123,7 +122,7 @@ $("#search").on("click", function(event) {
 })
 $("#random-cocktails").on("click", function(event) {
   event.preventDefault();
-  queryRandomCocktails()
+  queryRandomCocktails();
 })
 
 $(document).on("click", ".music-button", function(event) {
@@ -189,10 +188,4 @@ $(document).on("click", ".favoriteCocktails", function(event) {
   queryCocktailName()
  // }
 })
-
-//renderFavorites()
-
-
- 
-
 })
