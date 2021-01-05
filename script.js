@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   var APIkeyYoutube = configVars.APIkeyYoutube
   
   var queryURLcocktails = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
@@ -119,36 +120,42 @@ $(document).ready(function () {
       var fav = $("<p>").text(favoriteCocktails[i]).addClass("favoriteCocktails").attr("data-name", favoriteCocktails[i])
       console.log(fav)
       $("#favorites").append(fav)}*/
+})
+
+
+
+$("#random-cocktails").on("click", function(event) {
+  event.preventDefault();
+  queryRandomCocktails();
+})
+
+$(document).on("click", ".music-button", function(event) {
+  event.preventDefault();
+  var searchYoutube = $(this).attr("data-name");
+  searchVideo.push(searchYoutube);
+  queryYoutube();
+})
+
+$("#plus-sign").on("click", function (event) {
+  event.preventDefault();
+  var newCocktail = $("#cocktail-name").html()
+  if (newCocktail) {
+  favCocktails.push(newCocktail)
+
+  /*newCocktail = $("#cocktail-name").html();
+     if (favCocktails.length >= 5){  
+        favCocktails.shift();
+        favCocktails.push(newCocktail);
+
+    }else{
+    favCocktails.push(newCocktail);*/
+  renderFavorites();
+
+  }
+
   })
-  $("#random-cocktails").on("click", function(event) {
-    event.preventDefault();
-    queryRandomCocktails();
-  })
   
-  $(document).on("click", ".music-button", function(event) {
-    event.preventDefault();
-    var searchYoutube = $(this).attr("data-name");
-    searchVideo.push(searchYoutube);
-    queryYoutube();
-  })
-  
-  $("#plus-sign").on("click", function (event) {
-    event.preventDefault();
-    var newCocktail = $("#cocktail-name").html()
-    if (newCocktail) {
-    favCocktails.push(newCocktail)
-  
-    /*newCocktail = $("#cocktail-name").html();
-       if (favCocktails.length >= 5){  
-          favCocktails.shift();
-          favCocktails.push(newCocktail);
-  
-      }else{
-      favCocktails.push(newCocktail);*/
-    renderFavorites();
-  
-    }
-    })
+
   
   // this function reset the fav list
     $("#reset").on("click", function(event){
@@ -177,15 +184,34 @@ $(document).ready(function () {
     //console.log(favCocktails)
   
   // this function makes you display the cocktail receipe when you click the favorite cocktail list
-  $(document).on("click", ".favoriteCocktails", function(event) {
-    event.preventDefault();
-    event.stopPropagation()
-   // var element = event.target;
-   // if (element.matches("button") !== true) {
   
-    var cocktailName = $(this).attr("data-name")
-    cocktails.push(cocktailName)
-    queryCocktailName()
-   // }
-  })
-  })
+/*
+//    if (element.matches("button") === true) {
+
+    console.log($(this).attr("id"))
+    favCocktails.splice(($(this).attr("data-name")), 1)
+    console.log(favCocktails)
+    localStorage.removeItem($(this).attr("id"))
+    $(this).remove()
+    renderFavorites()
+  //  }
+  })*/
+  
+  //console.log(newCocktail)
+  //localStorage.setItem("favCocktails"+i, JSON.stringify(favCocktails))
+  //console.log(favCocktails)
+
+// this function makes you display the cocktail receipe when you click the favorite cocktail list
+$(document).on("click", ".favoriteCocktails", function(event) {
+  event.preventDefault();
+  event.stopPropagation()
+ // var element = event.target;
+ // if (element.matches("button") !== true) {
+
+  var cocktailName = $(this).attr("data-name")
+  cocktails.push(cocktailName)
+  queryCocktailName()
+ // }
+})
+})
+
