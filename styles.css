@@ -56,7 +56,7 @@ p {
   background-color: #827e45;
   color: white;
 }
-#random-cocktail {
+#random-cocktails {
   background-color: #827e45;
   color: white;
 }
@@ -118,7 +118,7 @@ button.mdl-button {
   opacity: 1;
 }
 .demo-blog.mdl-layout .mdl-layout__content {
-  padding-top: 230px;
+  padding-top: 150px;
   position: relative;
   -webkit-overflow-scrolling: touch;
 }
@@ -140,7 +140,7 @@ button.mdl-button {
 }
 #intoxicated {
   align-self: center;
-  margin-bottom: 30px;
+  margin-bottom: 90px;
 }
 
 #title {
@@ -287,7 +287,8 @@ button.mdl-button {
   -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: 100%;
+  height: 88px;
+  overflow: visible;
 }
 .demo-blog .meta > .meta__favorites{
   -webkit-flex-direction: row;
@@ -328,6 +329,9 @@ button.mdl-button {
           order: -1;
 }
 .cocktail-buttons {
+  min-height: 120px;
+  margin-top: 50px;
+  margin-bottom: 20px;
   height: 100%;
   width: 100%;
 }
@@ -512,7 +516,7 @@ div.favorite-title {
   color: white;
 }
 .mdl-card {
-  border-radius: 30px;
+  /*border-radius: 30px;*/
 }
 .mdl-button {
   border-radius: 30px;
@@ -526,6 +530,10 @@ div.favorite-title {
 #favorites-card {
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.mdl-card .something-else .mdl-cell .favorite-corners{
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
