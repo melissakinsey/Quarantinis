@@ -5,6 +5,7 @@ This project was completed for the Columbia University Engineering Full-Stack Co
 Repo: https://github.com/melissakinsey/Quarantinis
 
 GitHub Pages: https://melissakinsey.github.io/Quarantinis/
+Powerpoint : https://drive.google.com/file/d/16C3_LSZ43e-qrHRd2ar0Y34mUE58DyYK/view?usp=sharing
 
 #USER STORY
 
